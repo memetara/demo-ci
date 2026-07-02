@@ -27,6 +27,9 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
+          
+      - name: Check Java formatting
+          run: mvn spotless:check
 
       - name: Build project
         run: mvn clean install
