@@ -29,7 +29,7 @@ jobs:
           java-version: '21'
 
       - name: Check Java formatting
-        run: mvn spotless:check
+        run: ./gradlew spotlessCheck
 
       - name: Build project
-        run: mvn clean install
+        run:  ./gradlew build
